@@ -26,6 +26,11 @@ public class OrderRepository {
         return em.find(Order.class, id);
     }
 
+    public List<Order> findAll(){
+        return em.createQuery("select m from Order m", Order.class)
+                .getResultList();
+    }
+
 
     // JPA Criteria로 처리
     public List<Order> findAllByCriteria(OrderSearch orderSearch) {
