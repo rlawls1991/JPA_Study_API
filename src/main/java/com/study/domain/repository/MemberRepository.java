@@ -1,4 +1,4 @@
-package com.study.repository;
+package com.study.domain.repository;
 
 
 import com.study.domain.Member;

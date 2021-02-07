@@ -1,8 +1,8 @@
-package com.study.service;
+package com.study.domain.service;
 
 
 import com.study.domain.Member;
-import com.study.repository.MemberRepository;
+import com.study.domain.repository.MemberRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,7 +1,7 @@
 package com.study.domain.api;
 
 import com.study.domain.Member;
-import com.study.service.MemberService;
+import com.study.domain.service.MemberService;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

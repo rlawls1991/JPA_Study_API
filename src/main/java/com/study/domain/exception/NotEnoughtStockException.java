@@ -1,4 +1,4 @@
-package com.study.exception;
+package com.study.domain.exception;
 
 public class NotEnoughtStockException extends RuntimeException {
 

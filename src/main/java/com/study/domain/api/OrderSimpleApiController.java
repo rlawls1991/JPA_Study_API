@@ -3,8 +3,9 @@ package com.study.domain.api;
 import com.study.domain.Address;
 import com.study.domain.Order;
 import com.study.domain.OrderStatus;
-import com.study.repository.OrderRepository;
-import com.study.repository.OrderSearch;
+import com.study.domain.dto.OrderSimpleQueryDto;
+import com.study.domain.repository.OrderRepository;
+import com.study.domain.repository.OrderSimpleQueryRepository;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,17 +16,16 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- *
  * xToOne(ManyToOne, OneToOne) 관계 최적화
  * Order
  * Order -> Member
  * Order -> Delivery
- *
  */
 @RestController
 @RequiredArgsConstructor
 public class OrderSimpleApiController {
     private final OrderRepository orderRepository;
+    private final OrderSimpleQueryRepository orderSimpleQueryRepository;
 
     /**
      * V1. 엔티티 직접 노출
@@ -70,6 +70,15 @@ public class OrderSimpleApiController {
         return result;
     }
 
+    /**
+     * V4. JPA에서 DTO로 바로 조회
+     * - 쿼리 1번 호출
+     * - select 절에서 원하는 데이터만 선택해서 조회
+     */
+    @GetMapping("/api/v4/simple-orders")
+    public List<OrderSimpleQueryDto> ordersV4() {
+        return orderSimpleQueryRepository.findOrderDtos();
+    }
 
     @Data
     static class SimpleOrderDto {
@@ -78,6 +87,7 @@ public class OrderSimpleApiController {
         private LocalDateTime orderDate; //주문시간
         private OrderStatus orderStatus;
         private Address address;
+
         public SimpleOrderDto(Order order) {
             orderId = order.getId();
             name = order.getMember().getName();
@@ -86,4 +96,6 @@ public class OrderSimpleApiController {
             address = order.getDelivery().getAddress();
         }
     }
+
+
 }

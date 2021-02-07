@@ -2,7 +2,7 @@ package com.study.domain.item;
 
 
 import com.study.domain.Category;
-import com.study.exception.NotEnoughtStockException;
+import com.study.domain.exception.NotEnoughtStockException;
 import lombok.Getter;
 import lombok.Setter;
 

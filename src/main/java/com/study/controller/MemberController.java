@@ -3,7 +3,7 @@ package com.study.controller;
 
 import com.study.domain.Address;
 import com.study.domain.Member;
-import com.study.service.MemberService;
+import com.study.domain.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

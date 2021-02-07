@@ -1,4 +1,4 @@
-package com.study.service;
+package com.study.domain.service;
 
 
 import com.study.domain.Delivery;
@@ -6,10 +6,10 @@ import com.study.domain.Member;
 import com.study.domain.Order;
 import com.study.domain.OrderItem;
 import com.study.domain.item.Item;
-import com.study.repository.ItemRepository;
-import com.study.repository.MemberRepository;
-import com.study.repository.OrderRepository;
-import com.study.repository.OrderSearch;
+import com.study.domain.repository.ItemRepository;
+import com.study.domain.repository.MemberRepository;
+import com.study.domain.repository.OrderRepository;
+import com.study.domain.repository.OrderSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

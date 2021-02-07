@@ -3,7 +3,7 @@ package com.study.controller;
 
 import com.study.domain.item.Book;
 import com.study.domain.item.Item;
-import com.study.service.ItemService;
+import com.study.domain.service.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

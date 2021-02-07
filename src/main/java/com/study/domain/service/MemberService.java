@@ -1,7 +1,7 @@
-package com.study.service;
+package com.study.domain.service;
 
 import com.study.domain.Member;
-import com.study.repository.MemberRepository;
+import com.study.domain.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

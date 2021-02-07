@@ -1,4 +1,4 @@
-package com.study.init;
+package com.study.domain.init;
 
 import com.study.domain.*;
 import com.study.domain.item.Book;

@@ -1,4 +1,4 @@
-package com.study.service;
+package com.study.domain.service;
 
 
 import com.study.domain.Address;
@@ -7,8 +7,8 @@ import com.study.domain.Order;
 import com.study.domain.OrderStatus;
 import com.study.domain.item.Book;
 import com.study.domain.item.Item;
-import com.study.exception.NotEnoughtStockException;
-import com.study.repository.OrderRepository;
+import com.study.domain.exception.NotEnoughtStockException;
+import com.study.domain.repository.OrderRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
