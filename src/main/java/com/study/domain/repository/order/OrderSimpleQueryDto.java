@@ -1,4 +1,4 @@
-package com.study.domain.dto;
+package com.study.domain.repository.order;
 
 import com.study.domain.Address;
 import com.study.domain.OrderStatus;

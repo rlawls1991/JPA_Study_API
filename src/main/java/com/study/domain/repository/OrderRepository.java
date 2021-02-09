@@ -3,7 +3,7 @@ package com.study.domain.repository;
 
 import com.study.domain.Member;
 import com.study.domain.Order;
-import com.study.domain.dto.OrderSimpleQueryDto;
+import com.study.domain.repository.order.OrderSimpleQueryDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
@@ -107,7 +107,7 @@ public class OrderRepository {
 
     public List<OrderSimpleQueryDto> findOrderDtos() {
         return em.createQuery(
-                "select new com.study.domain.dto.OrderSimpleQueryDto(o.id, m.name, o.orderDate, o.status, d.address)" +
+                "select new com.study.domain.repository.order.OrderSimpleQueryDto(o.id, m.name, o.orderDate, o.status, d.address)" +
                         " from Order o" +
                         " join o.member m" +
                         " join o.delivery d", OrderSimpleQueryDto.class)
