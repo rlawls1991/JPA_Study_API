@@ -5,3 +5,4 @@
 ##step3 - fetch join 사용
 ##step4 - 엔티 직접 노출
 ##step5 - 페이징 한계 돌파
+##step6 - 컬렉션 조회 최적화
