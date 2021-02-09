@@ -6,6 +6,8 @@ import com.study.domain.OrderStatus;
 import com.study.domain.repository.OrderRepository;
 import com.study.domain.repository.order.OrderSimpleQueryDto;
 import com.study.domain.repository.order.OrderSimpleQueryRepository;
+import com.study.domain.repository.order.query.OrderQueryDto;
+import com.study.domain.repository.order.query.OrderQueryRepository;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +28,7 @@ import java.util.stream.Collectors;
 public class OrderSimpleApiController {
     private final OrderRepository orderRepository;
     private final OrderSimpleQueryRepository orderSimpleQueryRepository;
+    private final OrderQueryRepository orderQueryRepository;
 
     /**
      * V1. 엔티티 직접 노출
@@ -75,10 +78,23 @@ public class OrderSimpleApiController {
      * - 쿼리 1번 호출
      * - select 절에서 원하는 데이터만 선택해서 조회
      */
+
     @GetMapping("/api/v4/simple-orders")
     public List<OrderSimpleQueryDto> ordersV4() {
         return orderSimpleQueryRepository.findOrderDtos();
     }
+
+    @GetMapping("/api/v4/orders")
+    public List<OrderQueryDto> ordersV4_1() {
+        return orderQueryRepository.findOrderQueryDtos();
+    }
+
+    @GetMapping("/api/v5/orders")
+    public List<OrderQueryDto> ordersV5() {
+        return orderQueryRepository.findAllByDto_optimization();
+    }
+
+
 
     @Data
     static class SimpleOrderDto {
