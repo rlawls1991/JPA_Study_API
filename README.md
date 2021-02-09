@@ -7,3 +7,4 @@
 ##step5 - 페이징 한계 돌파
 ##step6 - 컬렉션 조회 최적화
 ##step7 - 플랫 데이터 최적화
+##step8 - QueryDSL 사용
